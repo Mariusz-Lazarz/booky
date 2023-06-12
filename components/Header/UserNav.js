@@ -13,9 +13,9 @@ export default function UserNav() {
   return (
     <>
       <div className="flex gap-1 items-center">
-        <div className="p-3 rounded-full hover:bg-orange-50 text-sm hidden lg:block">
+        {/* <div className="p-3 rounded-full hover:bg-orange-50 text-sm hidden lg:block">
           <p>Airbnb your home</p>
-        </div>
+        </div> */}
         <div className="p-3.5 rounded-full hover:bg-orange-50">
           <TfiWorld />
         </div>
