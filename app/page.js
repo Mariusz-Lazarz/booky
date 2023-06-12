@@ -1,4 +1,5 @@
+import Nav from "@/components/Header/Nav";
 
-export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+export default function Home({ children }) {
+  return <Nav></Nav>;
 }
