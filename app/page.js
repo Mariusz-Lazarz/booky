@@ -1,5 +1,4 @@
-import Nav from "@/components/Header/Nav";
 
 export default function Home({ children }) {
-  return <Nav></Nav>;
+  return <h1>This is home page</h1>;
 }
