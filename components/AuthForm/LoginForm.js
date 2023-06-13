@@ -11,7 +11,7 @@ export default function LoginForm(porps) {
             size={25}
             className="hover:cursor-pointer hover:bg-orange-50 rounded-full"
             onClick={porps.onClose}
-          />
+          />    
           <h1 className="font-bold">Login</h1>
           <div></div>
         </div>
