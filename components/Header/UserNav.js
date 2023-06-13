@@ -5,19 +5,38 @@ import { useState } from "react";
 import UserMenu from "./UserMenu";
 import AuthForm from "../AuthForm/AuthForm";
 import Overlay from "../Modal/Overlay";
+import LoginForm from "../AuthForm/LoginForm";
 export default function UserNav() {
   const [toggleUserMenu, setToggleUserMenu] = useState(false);
   const [toggleSignForm, setToggleSignForm] = useState(false);
+  const [toggleLoginForm, setToggleLoginForm] = useState(false);
+  const [overLay, setOverlay] = useState(false);
 
   const UserMenuHandler = function () {
     setToggleUserMenu((prevState) => !prevState);
   };
   const signOpenHandler = () => {
     setToggleSignForm(true);
+    setOverlay(true);
+    setToggleUserMenu(false);
+  };
+  const loginOpenHandler = () => {
+    setToggleLoginForm(true);
+    setOverlay(true);
     setToggleUserMenu(false);
   };
   const signCloseHandler = () => {
     setToggleSignForm(false);
+    setOverlay(false);
+  };
+  const loginCloseHandler = () => {
+    setToggleLoginForm(false);
+    setOverlay(false);
+  };
+  const turnOffOverlay = () => {
+    setOverlay(false);
+    setToggleSignForm(false);
+    setToggleLoginForm(false);
   };
   return (
     <>
@@ -30,9 +49,12 @@ export default function UserNav() {
             <HiMenu size={20} />
             <FaUserCircle size={30} color="grey" />
           </button>
-          {toggleUserMenu && <UserMenu onSign={signOpenHandler} />}
+          {toggleUserMenu && (
+            <UserMenu onSign={signOpenHandler} onLogin={loginOpenHandler} />
+          )}
           {toggleSignForm && <AuthForm onClose={signCloseHandler} />}
-          {toggleSignForm && <Overlay onClose={signCloseHandler} />}
+          {toggleLoginForm && <LoginForm onClose={loginCloseHandler} />}
+          {overLay && <Overlay onClose={turnOffOverlay} />}
         </div>
       </div>
     </>

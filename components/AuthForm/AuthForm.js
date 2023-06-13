@@ -12,7 +12,7 @@ export default function AuthForm(porps) {
             className="hover:cursor-pointer hover:bg-orange-50 rounded-full"
             onClick={porps.onClose}
           />
-          <h1 className="font-bold">Login</h1>
+          <h1 className="font-bold">Register</h1>
           <div></div>
         </div>
         <div>
