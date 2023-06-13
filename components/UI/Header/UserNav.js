@@ -4,11 +4,15 @@ import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
 import { TfiWorld } from "react-icons/tfi";
 import UserMenu from "./UserMenu";
+import Overlay from "../../Modal/Overlay";
 export default function UserNav() {
   const [toggleUserMenu, setToggleUserMenu] = useState(false);
 
   const UserMenuHandler = function () {
     setToggleUserMenu((prevState) => !prevState);
+  };
+  const ModalHandler = function () {
+    setToggleUserMenu(false);
   };
   return (
     <>
@@ -30,6 +34,7 @@ export default function UserNav() {
           {toggleUserMenu && <UserMenu />}
         </div>
       </div>
+      {toggleUserMenu && <Overlay onClick={ModalHandler} />}
     </>
   );
 }

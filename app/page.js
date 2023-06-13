@@ -1,4 +1,9 @@
+import RegisterForm from "@/components/UI/AuthForm/RegisterForm";
 
 export default function Home({ children }) {
-  return <h1></h1>;
+  return (
+    <>
+      <RegisterForm />
+    </>
+  );
 }
