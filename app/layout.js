@@ -1,4 +1,5 @@
-import Nav from "@/components/UI/Header/Nav";
+import Nav from "@/components/Header/Nav";
+import AuthForm from "@/components/AuthForm/AuthForm";
 import "./globals.css";
 import { Inter } from "next/font/google";
 

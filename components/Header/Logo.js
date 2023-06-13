@@ -9,7 +9,7 @@ export default function Logo() {
     //   height={50}
     //   className="hover:cursor-pointer hidden lg:block"
     // ></img>
-    <h1 className='text-red-600 italic font-bold text-lg'>
+    <h1 className="text-red-600 italic font-bold text-lg hover:cursor-pointer hidden lg:block">
       Booky
     </h1>
   );
